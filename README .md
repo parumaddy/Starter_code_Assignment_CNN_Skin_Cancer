@@ -12,11 +12,9 @@ To build a CNN based model which can accurately detect melanoma. Melanoma is a t
 
 - [General Info](#general-information)
 - [Model Architecture](#model-architecture)
-- [Model Summary](#model-summary)
-- [Model Evaluation](#model-evaluation)
 - [Technologies Used](#technologies-used)
 - [Acknowledgements](#acknowledgements)
-- [Collaborators](#collaborators)
+
 
 <!-- You can include any other section that is pertinent to your problem -->
 
@@ -24,13 +22,12 @@ To build a CNN based model which can accurately detect melanoma. Melanoma is a t
 
 The dataset comprises 2357 images depicting malignant and benign oncological conditions, sourced from the International Skin Imaging Collaboration (ISIC). These images were categorized based on the classification provided by ISIC, with each subset containing an equal number of images.
 
-![datasetgraph](./class_distribution.png)
 
 In order to address the challenge of class imbalance, the Augmentor Python package (https://augmentor.readthedocs.io/en/master/) was employed to augment the dataset. This involved generating additional samples for all classes, ensuring that none of the classes had insufficient representation.
 
 ## Pictorial representation of skin types
 
-![skincancertypes](./skin_cancer_types.png)
+
 
 The aim of this task is to assign a specific class label to a particular type of skin cancer.
 
@@ -58,13 +55,6 @@ The break down of the final provided CNN architecture step by step:
 
 10. **Training**: The model is trained using the `fit` method with the specified number of epochs (`epochs=50`). The `ModelCheckpoint` and `EarlyStopping` callbacks are employed to monitor the validation accuracy during training. The `ModelCheckpoint` callback saves the model with the best validation accuracy, while the `EarlyStopping` callback stops training if the validation accuracy does not improve for a specified number of epochs (patience=5 in this case). These callbacks help prevent overfitting and ensure that the model converges to the best possible solution.
 
-## Model Summary
-
-![Model Architecture](./model_summary.png)
-
-## Model Evaluation
-
-![Model Evaluation](./model_evaluation.png)
 
 ## Technologies Used
 
@@ -89,6 +79,4 @@ The break down of the final provided CNN architecture step by step:
 
 - [Efficient way to build CNN architecture](https://towardsdatascience.com/a-guide-to-an-efficient-way-to-build-neural-network-architectures-part-ii-hyper-parameter-42efca01e5d7)
 
-## Collaborators
 
-Created by [@akashkriplani](https://github.com/akashkriplani)
